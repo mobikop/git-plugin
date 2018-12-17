@@ -3,7 +3,17 @@
   <name>Template</name>
   <settings>
     <parameters />
-    <build-runners />
+    <build-runners>
+      <runner id="RUNNER_2" name="" type="simpleRunner">
+        <parameters>
+          <param name="script.content"><![CDATA[echo "Hello world"
+pwd
+echo $PATH]]></param>
+          <param name="teamcity.step.mode" value="default" />
+          <param name="use.custom.script" value="true" />
+        </parameters>
+      </runner>
+    </build-runners>
     <vcs-settings>
       <vcs-entry-ref root-id="GitPlugin_HttpsGithubComMobikopGitPluginRefsHeadsMaster" />
     </vcs-settings>
